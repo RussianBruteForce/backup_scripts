@@ -6,7 +6,7 @@ tar -cj \
 	~/.mypass.kdb \
 	~/.mozilla/firefox \
 	~/.thunderbird \
-	~/dev \
+	~/dev/univer \
 	~/.gnupg \
 	~/.i2p \
 	~/.xchat2 \
