@@ -1,0 +1,15 @@
+#!/bin/bash
+
+cur_time=`date +%F-%H-%M-%S`
+
+tar -cj \
+	~/.mypass.kdb \
+	~/.mozilla/firefox \
+	~/.thunderbird \
+	~/dev \
+	~/.gnupg \
+	~/.i2p \
+	~/.xchat2 \
+	~/.config/PyBitmessage | \
+	gpg -r russianbruteforce@gmail.com -e | \
+	gpg -c --cipher-algo CAMELLIA256 - > "$cur_time.backup"
