@@ -1,2 +1,2 @@
 #!/bin/bash
-gpg -d $1 |gpg -d - | tar jx -C /
+gpg -d $1 |gpg -d - | tar jvx -C /

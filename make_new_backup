@@ -2,7 +2,7 @@
 
 cur_time=`date +%F-%H-%M-%S`
 
-tar -cj \
+tar -cvj \
 	~/.mypass.kdb \
 	~/.mozilla/firefox \
 	~/.thunderbird \
