@@ -15,3 +15,5 @@ tar -cvj \
 	~/.config/PyBitmessage | \
 	gpg -r russianbruteforce@gmail.com -e | \
 	gpg -c --cipher-algo CAMELLIA256 - > "$cur_time.backup"
+
+md5sum -b "$cur_time.backup" > "$cur_time.backup.md5"

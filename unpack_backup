@@ -1,2 +1,5 @@
 #!/bin/bash
+echo "Checking md5 sum if any...\n"
+md5sum -c "$1.md5"
+echo "Unpacking...\n"
 gpg -d $1 |gpg -d - | tar jvx -C /
