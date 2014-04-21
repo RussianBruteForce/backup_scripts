@@ -8,6 +8,7 @@ tar -cj \
 	~/.thunderbird \
 	~/dev/univer \
 	~/.gnupg \
+	~/virt \
 	~/vps \
 	~/.i2p \
 	~/.xchat2 \
