@@ -4,8 +4,6 @@ cur_time=`date +%F-%H-%M-%S`
 du -hcs \
 	~/.mypass.kdb \
 	~/.mozilla/seamonkey \
-#	~/.mozilla/firefox \
-#	~/.thunderbird \
 	~/dev/univer \
 	~/.gnupg \
 	~/virt \
