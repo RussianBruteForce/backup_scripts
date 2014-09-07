@@ -2,19 +2,19 @@
 
 cur_time=`date +%F-%H-%M-%S`
 du -hcs \
-	~/.mypass.kdb \
-	~/.mozilla/seamonkey \
+	~/.mypass \
+	~/.mozilla/firefox \
+        ~/.thunderbird \
 	~/dev/univer \
 	~/.gnupg \
 	~/virt \
 	~/vps \
 	~/.i2p \
-	~/.xchat2 \
 	~/.config/PyBitmessage
 
 read -n1 -r -p "Press Enter to encrypt..." key
 tar -cj \
-	~/.mypass.kdb \
+	~/.mypass \
 	~/.mozilla/firefox \
 	~/.thunderbird \
 	~/dev/univer \
@@ -22,10 +22,11 @@ tar -cj \
 	~/virt \
 	~/vps \
 	~/.i2p \
-	~/.xchat2 \
-	~/.config/PyBitmessage | \
+        ~/.config/PyBitmessage | \
 	gpg -r russianbruteforce@gmail.com -e | \
 	gpg -c --cipher-algo CAMELLIA256 - > "$cur_time.backup"
 
-du "$cur_time.backup"
+du -h "$cur_time.backup"
 md5sum -b "$cur_time.backup" > "$cur_time.backup.md5"
+
+mv *.backup* ..
